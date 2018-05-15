@@ -1,10 +1,10 @@
 {% set provider= "ProfitBricks" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
-{% set sha256 = "6e5797f9c7484423db7f93dee3a7342a3fb9212b816adeec86a950b786238cc4" %}
+{% set sha256 = "ad61b6045fc1f2e51c89d59019bb04bad3e95572c20034dd822326e2bad1f07c" %}
 {% set sha256_win32 = "fae90306cb836740a33bf3c6f650fca0941e881caffb800e5ea52171c52f13a6" %}
 {% set sha256_win64 = "8980633034e71dd3ed6e7efcf0689662d83f7410d926507f8e24444597c74046" %}
 
