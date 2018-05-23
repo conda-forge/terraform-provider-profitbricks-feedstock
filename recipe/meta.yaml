@@ -1,12 +1,11 @@
-{% set provider= "ProfitBricks" %}
-{% set version = "1.1.1" %}
+{% set provider = "ProfitBricks" %}
+{% set version = "1.2.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
-{% set sha256 = "6e5797f9c7484423db7f93dee3a7342a3fb9212b816adeec86a950b786238cc4" %}
-{% set sha256_win32 = "fae90306cb836740a33bf3c6f650fca0941e881caffb800e5ea52171c52f13a6" %}
-{% set sha256_win64 = "8980633034e71dd3ed6e7efcf0689662d83f7410d926507f8e24444597c74046" %}
+{% set sha256 = "ad61b6045fc1f2e51c89d59019bb04bad3e95572c20034dd822326e2bad1f07c" %}
+{% set sha256_win64 = "80dff20fd9953cbdb039a92496b81285b66759f9b9d5f37a5c9ce6408713a54b" %}
 
 package:
   name: {{ name|lower }}
@@ -17,10 +16,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz  # [not win]
   sha256: {{ sha256 }}  # [not win]
 
-  url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_386.zip  # [win32]
   url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_amd64.zip  # [win64]
   fn: {{ name }}-{{ version }}.zip  # [win]
-  sha256: {{ sha256_win32 }}  # [win32]
   sha256: {{ sha256_win64 }}  # [win64]
 
 build:
@@ -46,7 +43,7 @@ about:
   license: MPL 2.0
   summary: The Terraform {{ provider }} provider
   doc_url: https://www.terraform.io/docs/providers/{{ provider|lower }}/index.html
-  dev_url: https://https://github.com/terraform-providers/{{ name }}
+  dev_url: https://github.com/terraform-providers/{{ name }}
 
 extra:
   recipe-maintainers:
