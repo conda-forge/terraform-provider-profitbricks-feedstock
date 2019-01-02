@@ -6,6 +6,7 @@
 {% set pkg_src = ('src/'+goname).replace("/",os.sep) %}
 
 {% set x4_plugin = name + '_v' + version + "_x4" + (".exe" if win else "")%}
+{% set sha256 = "" %}
 
 package:
   name: {{ name|lower }}
