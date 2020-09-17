@@ -1,6 +1,6 @@
 {% set provider = "ProfitBricks" %}
 {% set goname = "github.com/terraform-providers/terraform-provider-"+provider.lower() %}
-{% set version = "1.5.6" %}
+{% set version = "1.5.7" %}
 
 {% set name = goname.split('/')[-1] %}
 
@@ -13,7 +13,7 @@ package:
 
 source:
   url: https://{{ goname }}/archive/v{{ version }}.tar.gz
-  sha256: bc9cf98c26b490f615f2209464e3c4f2a6929d9aada03c5ac7b719b1c31b2892
+  sha256: 3877a28af3db585c09ca2bf8d1a826827857a6270f1c25f1ba4c1f02039ae061
 
 build:
   number: 0
